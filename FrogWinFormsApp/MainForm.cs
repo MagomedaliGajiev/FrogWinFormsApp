@@ -6,5 +6,19 @@ namespace FrogWinFormsApp
         {
             InitializeComponent();
         }
+
+        private void rightPictureBox1_Click(object sender, EventArgs e)
+        {
+            Swap((PictureBox)sender);
+        }
+
+        private void Swap(PictureBox clickedPictureBox)
+        {
+            var location = clickedPictureBox.Location;
+
+            clickedPictureBox.Location = emptyPictureBox.Location;
+
+            emptyPictureBox.Location = location;
+        }
     }
 }

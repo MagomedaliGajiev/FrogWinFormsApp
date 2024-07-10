@@ -35,7 +35,7 @@
             rightPictureBox3 = new PictureBox();
             rightPictureBox2 = new PictureBox();
             rightPictureBox1 = new PictureBox();
-            emptyPictureBox1 = new PictureBox();
+            emptyPictureBox = new PictureBox();
             rightPictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox2).BeginInit();
@@ -44,7 +44,7 @@
             ((System.ComponentModel.ISupportInitialize)rightPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)emptyPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)emptyPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox4).BeginInit();
             SuspendLayout();
             // 
@@ -117,16 +117,17 @@
             rightPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             rightPictureBox1.TabIndex = 5;
             rightPictureBox1.TabStop = false;
+            rightPictureBox1.Click += rightPictureBox1_Click;
             // 
             // emptyPictureBox1
             // 
-            emptyPictureBox1.Image = Properties.Resources.list;
-            emptyPictureBox1.Location = new Point(440, 0);
-            emptyPictureBox1.Name = "emptyPictureBox1";
-            emptyPictureBox1.Size = new Size(110, 110);
-            emptyPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            emptyPictureBox1.TabIndex = 4;
-            emptyPictureBox1.TabStop = false;
+            emptyPictureBox.Image = Properties.Resources.list;
+            emptyPictureBox.Location = new Point(440, 0);
+            emptyPictureBox.Name = "emptyPictureBox1";
+            emptyPictureBox.Size = new Size(110, 110);
+            emptyPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            emptyPictureBox.TabIndex = 4;
+            emptyPictureBox.TabStop = false;
             // 
             // rightPictureBox4
             // 
@@ -147,7 +148,7 @@
             Controls.Add(rightPictureBox3);
             Controls.Add(rightPictureBox2);
             Controls.Add(rightPictureBox1);
-            Controls.Add(emptyPictureBox1);
+            Controls.Add(emptyPictureBox);
             Controls.Add(leftPictureBox4);
             Controls.Add(leftPictureBox3);
             Controls.Add(leftPictureBox2);
@@ -161,7 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)rightPictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)emptyPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)emptyPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox4).EndInit();
             ResumeLayout(false);
         }
@@ -175,7 +176,7 @@
         private PictureBox rightPictureBox3;
         private PictureBox rightPictureBox2;
         private PictureBox rightPictureBox1;
-        private PictureBox emptyPictureBox1;
+        private PictureBox emptyPictureBox;
         private PictureBox rightPictureBox4;
     }
 }
