@@ -37,6 +37,10 @@
             rightPictureBox1 = new PictureBox();
             emptyPictureBox = new PictureBox();
             rightPictureBox4 = new PictureBox();
+            label1 = new Label();
+            scoreLabel = new Label();
+            rulesButton = new Button();
+            restartButton = new Button();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox3).BeginInit();
@@ -146,11 +150,61 @@
             rightPictureBox4.TabStop = false;
             rightPictureBox4.Click += PictureBox_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.FromArgb(255, 128, 0);
+            label1.Location = new Point(54, 149);
+            label1.Name = "label1";
+            label1.Size = new Size(307, 40);
+            label1.TabIndex = 9;
+            label1.Text = "Количество ходов - ";
+            // 
+            // scoreLabel
+            // 
+            scoreLabel.AutoSize = true;
+            scoreLabel.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            scoreLabel.ForeColor = Color.FromArgb(255, 128, 0);
+            scoreLabel.Location = new Point(349, 149);
+            scoreLabel.Name = "scoreLabel";
+            scoreLabel.Size = new Size(34, 40);
+            scoreLabel.TabIndex = 10;
+            scoreLabel.Text = "0";
+            // 
+            // rulesButton
+            // 
+            rulesButton.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            rulesButton.ForeColor = Color.FromArgb(255, 128, 0);
+            rulesButton.Location = new Point(407, 143);
+            rulesButton.Name = "rulesButton";
+            rulesButton.Size = new Size(314, 49);
+            rulesButton.TabIndex = 11;
+            rulesButton.Text = "Показать правила";
+            rulesButton.UseVisualStyleBackColor = true;
+            rulesButton.Click += rulesButton_Click;
+            // 
+            // restartButton
+            // 
+            restartButton.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            restartButton.ForeColor = Color.FromArgb(255, 128, 0);
+            restartButton.Location = new Point(744, 143);
+            restartButton.Name = "restartButton";
+            restartButton.Size = new Size(222, 49);
+            restartButton.TabIndex = 12;
+            restartButton.Text = "Рестарт";
+            restartButton.UseVisualStyleBackColor = true;
+            restartButton.Click += restartButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(992, 178);
+            ClientSize = new Size(992, 250);
+            Controls.Add(restartButton);
+            Controls.Add(rulesButton);
+            Controls.Add(scoreLabel);
+            Controls.Add(label1);
             Controls.Add(rightPictureBox4);
             Controls.Add(rightPictureBox3);
             Controls.Add(rightPictureBox2);
@@ -172,6 +226,7 @@
             ((System.ComponentModel.ISupportInitialize)emptyPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox4).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -185,5 +240,9 @@
         private PictureBox rightPictureBox1;
         private PictureBox emptyPictureBox;
         private PictureBox rightPictureBox4;
+        private Label label1;
+        private Label scoreLabel;
+        private Button rulesButton;
+        private Button restartButton;
     }
 }
