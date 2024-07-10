@@ -7,7 +7,7 @@ namespace FrogWinFormsApp
             InitializeComponent();
         }
 
-        private void rightPictureBox1_Click(object sender, EventArgs e)
+        private void PictureBox_Click(object sender, EventArgs e)
         {
             Swap((PictureBox)sender);
         }
